@@ -13,7 +13,7 @@ A brief list of designs, boot loaders and applications in order to easily identi
  1. [HDL RISC-V version 1 core IP](https://github.com/dev-board-tech/hdl-core-riscv-lite):
     * Is the first version of a RISC-V32I soft-core HDL design that is split in two, one version with separate BUS'es one for instruction fetch and one for data load/store, and one soft-core with single BUS, unfortunately this core is not optimized on running on arduFPGA-game-console, running at up to 5Mhz in both single/dual BUS mode because there is a need for a large number of registers to create 32 registers with 32 bits, so it uses BLOCK RAM as registers latching the outputs at negative clock, this core include a nested interrupt controller with configurable number of interrupt lines ***DEPRECATED***.
  1. [HDL RISC-V version 2 core IP](https://github.com/dev-board-tech/hdl-core-riscv-lite-v2):
-    * Is the second version of a RISC-V32I soft-core HDL design better optimized on running on arduFPGA-game-console being able to configure it on single/dual BUS running at frequencies up to 15Mhz without timing violations and up to 22Mhz overclocked, this core include an nested interrupt module with configurable number of interrupt lines.
+    * Is the second version of a RISC-V32I soft-core HDL design better optimized on running on arduFPGA-game-console being able to configure it on single/dual BUS running at frequencies up to 15Mhz without timing violations and up to 22Mhz overclocked, this core include a nested interrupt module with configurable number of interrupt lines.
  1. [HDL IO IP's (PIO, UART, SPI, TWI...)](https://github.com/dev-board-tech/hdl-core-common):
     * Is the repository with all the IO's that can be wired to the Atmega/Atxmega and RISC-V cores or be used in custom standalone designs.
  1. [HDL Atmega32U4 design template](https://github.com/dev-board-tech/arduFPGA-mega-design-template-simple):
@@ -33,7 +33,7 @@ A brief list of designs, boot loaders and applications in order to easily identi
 
 1. #### Debuggers:
  1. [arduFPGA debugger PC tool](https://github.com/dev-board-tech/arduFPGA-external-programing-tool):
-    * In order to use this debugger tool the first stage boot-loader need to include the debug section and the user application not to use the same UART interface as the debug section in first stage boot-loader.
+    * In order to use this debugger tool the first stage boot-loader need to include the debug section and the user application not to use the same UART interface.
  1. [arduFPGA debugger PC interface](https://github.com/dev-board-tech/arduFPGA-debugger):
     * A graphical interface for easy read/write edit memory content on a design that include the debug section in the first stage boot-loader.
 
